@@ -1,21 +1,33 @@
-import { ReadMarketCard } from "@/components/cards/ReadMarketCard";
-import { Card2 } from "@/components/cards/Card2";
-import { Card3 } from "@/components/cards/Card3";
-import { Card4 } from "@/components/cards/Card4";
-import { Card5 } from "@/components/cards/Card5";
-import { Card6 } from "@/components/cards/Card6";
+import { PageBackground } from "@/components/landing/PageBackground";
+import { Nav } from "@/components/landing/Nav";
+import { Hero } from "@/components/landing/Hero";
+import { Recognition } from "@/components/landing/Recognition";
+import { WhatIsJaadu } from "@/components/landing/WhatIsJaadu";
+import { QuantLab } from "@/components/landing/QuantLab";
+import { Features } from "@/components/landing/Features";
+import { FounderNote } from "@/components/landing/FounderNote";
+import { Timeline } from "@/components/landing/Timeline";
+import { Team } from "@/components/landing/Team";
+import { FinalCta } from "@/components/landing/FinalCta";
+import { Footer } from "@/components/landing/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-1 items-center justify-center bg-[#0a0b1a] px-6 py-24">
-      <div className="grid grid-cols-3 gap-6">
-        <ReadMarketCard />
-        <Card2 />
-        <Card3 />
-        <Card4 />
-        <Card5 />
-        <Card6 />
-      </div>
+    <div className="jaadu-landing">
+      <PageBackground />
+      <Nav />
+      <main>
+        <Hero />
+        <Recognition />
+        <WhatIsJaadu />
+        <QuantLab />
+        <Features />
+        <FounderNote />
+        <Timeline />
+        <Team />
+        <FinalCta />
+      </main>
+      <Footer />
     </div>
   );
 }

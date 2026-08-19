@@ -1,0 +1,844 @@
+/* Jaadu 2.0 — Landing page styles. Everything here is scoped under the
+   `.jaadu-landing` wrapper class (see src/app/page.tsx) so it never leaks
+   into the rest of the app (Tailwind theme tokens, /cards, /quant demos). */
+
+.jaadu-landing {
+  /* Color: primary */
+  --color-primary-400: #2653cf;
+  --color-primary-500: #5985ff;
+  --color-primary-700: #5cb5ff;
+  --color-primary-900: #80c5ff;
+
+  /* Color: text */
+  --color-text-primary: #f1f6ff;
+  --color-text-primary-alt: #f3f4ff;
+  --color-text-secondary: #a7bce4;
+  --color-text-muted: #3b567a;
+  --color-text-accent: #4da3ff;
+  --color-hero-subhead: #d8daee;
+  --color-statement-secondary: #989dd6;
+
+  /* Color: border / surface */
+  --color-border: rgba(167, 191, 255, 0.3);
+  --color-border-chart-grid: rgba(128, 197, 255, 0.1);
+  --color-bg-elevated: rgba(0, 85, 209, 0.1);
+  --color-bg-component: rgba(0, 52, 194, 0.15);
+  --color-input-fill: rgba(31, 60, 139, 0.1);
+  --color-glass-card-bg: rgba(1, 6, 54, 0.5);
+  --color-icon-muted: #4c6aa5;
+
+  /* Color: semantic */
+  --color-red-500: #ff5971;
+  --color-red-50: rgba(255, 89, 113, 0.1);
+  --color-cyan-500: #0ff;
+  --color-cyan-50: rgba(0, 255, 255, 0.1);
+  --color-green-500: #45ffb5;
+  --color-green-50: rgba(69, 255, 181, 0.1);
+  --color-pink-500: #ff3e88;
+
+  /* Section divider */
+  --color-section-divider: rgba(172, 169, 255, 0.2);
+  --color-footer-divider: rgba(186, 199, 255, 0.15);
+
+  /* Base page */
+  --color-bg-page: #000017;
+
+  /* Typography */
+  --font-sans: var(--font-geist-sans), "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), "IBM Plex Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  /* Type scale */
+  --fs-hero-h1: 45px;
+  --lh-hero-h1: 50px;
+  --fs-h2: 28px;
+  --lh-h2: 40px;
+  --fs-h2-tight: 36px;
+  --fs-h3: 28px;
+  --fs-h5: 18px;
+  --fs-body1: 16px;
+  --lh-body1: 22px;
+  --fs-body2: 14px;
+  --lh-body2: 20px;
+  --fs-body3: 12px;
+  --lh-body3: 16px;
+  --fs-tooltip: 10px;
+  --fs-name: 20px;
+  --fs-copyright: 13px;
+
+  /* Spacing scale */
+  --space-4: 4px;
+  --space-5: 5px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-13: 13px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-25: 25px;
+  --space-30: 30px;
+  --space-34: 34px;
+  --space-37: 37px;
+  --space-40: 40px;
+  --space-42: 42px;
+  --space-48: 48px;
+  --space-56: 56px;
+  --space-72: 72px;
+  --space-120: 120px;
+
+  /* Radii */
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-7: 7px;
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-19: 19px;
+  --radius-24: 24px;
+  --radius-25: 25.835px;
+  --radius-pill: 999px;
+
+  /* Blur */
+  --blur-nav: 20px;
+  --blur-panel: 64.196px;
+  --blur-hero-card: 2.691px;
+
+  /* Shadows */
+  --shadow-nav: 0px 12px 32px 0px rgba(3, 5, 20, 0.45);
+  --shadow-glow-sm: 0px 0px 12.753px 0px rgba(0, 7, 156, 0.12);
+
+  /* Shared eases */
+  --ease-swift-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0, 0, 0.58, 1);
+  --ease-in: cubic-bezier(0.42, 0, 1, 1);
+  --ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+
+  /* Layout */
+  --page-max: 1440px;
+  --content-max: 1200px;
+
+  /* ---- Page-level reset (scoped; does not touch the rest of the app) ---- */
+  position: relative;
+  overflow-x: hidden;
+  background: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  min-height: 100%;
+}
+
+.jaadu-landing, .jaadu-landing *, .jaadu-landing *::before, .jaadu-landing *::after { box-sizing: border-box; }
+
+.jaadu-landing img, .jaadu-landing svg { display: block; max-width: 100%; }
+.jaadu-landing a { color: inherit; text-decoration: none; }
+.jaadu-landing button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+.jaadu-landing ul { margin: 0; padding: 0; list-style: none; }
+.jaadu-landing p, .jaadu-landing h1, .jaadu-landing h2, .jaadu-landing h3, .jaadu-landing h4 { margin: 0; }
+.jaadu-landing h1, .jaadu-landing h2, .jaadu-landing h3, .jaadu-landing h4 { font-weight: 600; }
+.jaadu-landing ::selection { background: rgba(89, 133, 255, 0.35); color: #fff; }
+
+.jaadu-landing .container {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding-left: var(--space-120);
+  padding-right: var(--space-120);
+}
+
+.jaadu-landing .eyebrow {
+  font: 500 var(--fs-body2)/var(--lh-body2) var(--font-sans);
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--color-primary-500);
+}
+
+.jaadu-landing .section-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-10);
+  text-align: center;
+}
+.jaadu-landing .section-heading h2 {
+  font: 500 var(--fs-h2)/var(--lh-h2) var(--font-sans);
+  letter-spacing: -0.6px;
+  color: var(--color-text-primary);
+  max-width: 700px;
+}
+.jaadu-landing .section-heading p {
+  font: 400 var(--fs-body2)/var(--lh-body2) var(--font-sans);
+  color: var(--color-text-secondary);
+  max-width: 660px;
+}
+
+.jaadu-landing .section {
+  position: relative;
+  padding: var(--space-72) var(--space-120);
+  border-top: 1px solid var(--color-section-divider);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-48);
+}
+
+.jaadu-landing .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  padding: var(--space-8) var(--space-20);
+  border-radius: var(--radius-8);
+  font: 600 var(--fs-body2)/var(--lh-body2) var(--font-sans);
+  border: 1px solid transparent;
+  transition: transform 0.15s var(--ease-out), background 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+  white-space: nowrap;
+}
+.jaadu-landing .btn:hover { transform: translateY(-1px); }
+.jaadu-landing .btn:active { transform: translateY(0); }
+
+.jaadu-landing .btn-primary {
+  background: var(--color-primary-500);
+  border-color: rgba(128, 197, 255, 0.05);
+  color: #fff;
+}
+.jaadu-landing .btn-primary:hover { box-shadow: 0 4px 20px rgba(89, 133, 255, 0.45); }
+
+.jaadu-landing .btn-ghost {
+  background: rgba(101, 121, 176, 0.12);
+  border-color: rgba(82, 83, 96, 0.32);
+  color: #fff;
+}
+.jaadu-landing .btn-ghost:hover { background: rgba(101, 121, 176, 0.22); }
+
+.jaadu-landing .btn-white {
+  background: #fff;
+  border-color: rgba(82, 83, 96, 0.32);
+  color: #05060f;
+  backdrop-filter: blur(var(--blur-panel));
+}
+.jaadu-landing .btn-white:hover { box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2); }
+
+.jaadu-landing .visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Scroll reveal (IntersectionObserver-driven, see Reveal.tsx) */
+.jaadu-landing .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+.jaadu-landing .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jaadu-landing .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* =========================================================
+   Ambient page background (Section 0)
+   ========================================================= */
+.jaadu-landing .page-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.jaadu-landing .bg-circuit-wrap {
+  position: absolute;
+  top: -89px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1440px;
+  height: 900px;
+  opacity: 0.85;
+  pointer-events: auto; /* circuit hover needs pointer events */
+}
+
+.jaadu-landing .circuit-svg { width: 100%; height: 100%; overflow: visible; }
+
+.jaadu-landing .ct-trace, .jaadu-landing .ct-via, .jaadu-landing .ct-pad {
+  will-change: opacity, filter;
+}
+.jaadu-landing .ct-trace { opacity: 1; }
+.jaadu-landing .ct-via { opacity: 1; }
+.jaadu-landing .ct-pad { opacity: 1; }
+
+/* Hub connector: cursor point -> every nearby circuit node (via/pad). The
+   rest of the board never reacts to hover — only the hovering point and the
+   nodes around it light up, per design direction ("does not disturb the
+   background"). */
+.jaadu-landing #ct-connector-g { will-change: opacity; }
+.jaadu-landing .ct-connector-line {
+  filter: drop-shadow(0 0 4px rgba(140, 190, 255, 0.7));
+  will-change: opacity;
+}
+.jaadu-landing .ct-connector-dot {
+  filter: drop-shadow(0 0 5px rgba(150, 200, 255, 0.85));
+  will-change: opacity;
+}
+.jaadu-landing .ct-connector-hub {
+  filter: drop-shadow(0 0 6px rgba(200, 220, 255, 0.9));
+}
+
+.jaadu-landing .bg-rings {
+  position: absolute;
+  top: -89px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1477px;
+  height: 900px;
+  background: url('/assets/icons/hero-bg-rings.svg') no-repeat center / contain;
+  opacity: 0.5;
+}
+
+.jaadu-landing .bg-starfield {
+  position: absolute;
+  top: -89px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1477px;
+  height: 900px;
+  background: url('/assets/icons/hero-bg-starfield.svg') no-repeat center / contain;
+  opacity: 0.6;
+}
+
+.jaadu-landing .bg-dot-grid {
+  position: absolute;
+  top: 0;
+  width: 360px;
+  height: 1283px;
+  opacity: 0.6;
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 80%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 80%, transparent);
+}
+.jaadu-landing .bg-dot-grid--left { left: 0; }
+.jaadu-landing .bg-dot-grid--right { right: 0; transform: scaleX(-1); }
+
+.jaadu-landing .bg-hud-frame {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  height: 900px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 24px;
+}
+.jaadu-landing .bg-hud-frame::before,
+.jaadu-landing .bg-hud-frame::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(167, 191, 255, 0.25);
+}
+.jaadu-landing .bg-hud-frame::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+.jaadu-landing .bg-hud-frame::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+.jaadu-landing header.nav, .jaadu-landing main, .jaadu-landing footer.footer { position: relative; z-index: 1; }
+
+/* =========================================================
+   Nav
+   ========================================================= */
+.jaadu-landing .nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.jaadu-landing .nav-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  border-radius: var(--radius-16);
+  background: rgba(2, 0, 30, 0.55);
+  backdrop-filter: blur(var(--blur-nav));
+  -webkit-backdrop-filter: blur(var(--blur-nav));
+  border: 1px solid rgba(144, 174, 255, 0.2);
+  box-shadow: var(--shadow-nav);
+}
+.jaadu-landing .nav-logo img { height: 32px; width: auto; }
+.jaadu-landing .nav-links { display: flex; gap: 37px; }
+.jaadu-landing .nav-links a {
+  font: 500 14px/20px var(--font-sans);
+  color: var(--color-text-secondary);
+  transition: color 0.2s;
+}
+.jaadu-landing .nav-links a:hover { color: #fff; }
+.jaadu-landing .nav-actions { display: flex; gap: 12px; }
+
+/* =========================================================
+   Hero
+   ========================================================= */
+.jaadu-landing .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 152.9px;
+  padding-bottom: 90px;
+  position: relative;
+}
+.jaadu-landing .hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 662px;
+  text-align: center;
+  padding: 0 24px;
+}
+.jaadu-landing .hero-pill {
+  font: 600 12px/16px var(--font-mono);
+  letter-spacing: 0.4px;
+  color: #fff;
+  border: 0.5px solid rgba(167, 191, 255, 0.3);
+  border-radius: var(--radius-7);
+  padding: 8px 14px;
+  background: radial-gradient(circle at center, rgba(4, 28, 91, 0.4) 0%, rgba(89, 114, 255, 0.08) 100%);
+}
+.jaadu-landing .hero-title h1 {
+  font: 600 var(--fs-hero-h1)/var(--lh-hero-h1) var(--font-sans);
+  letter-spacing: -0.45px;
+  color: var(--color-text-primary-alt);
+}
+.jaadu-landing .hero-subhead {
+  font: 500 var(--fs-body1)/var(--lh-body1) var(--font-sans);
+  color: var(--color-hero-subhead);
+}
+.jaadu-landing .hero-cta { margin-top: 8px; padding: 8px 32px; }
+
+/* =========================================================
+   Recognition strip
+   ========================================================= */
+.jaadu-landing .recognition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 120px;
+}
+.jaadu-landing .recognition-logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+  width: 100%;
+  max-width: 1208px;
+  height: 70px;
+}
+.jaadu-landing .recognition-logos img {
+  flex: 1 0 0;
+  height: auto;
+  max-height: 70px;
+  width: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  opacity: 0.85;
+  filter: grayscale(0.15);
+}
+
+/* =========================================================
+   Statement ("What is Jaadu")
+   ========================================================= */
+.jaadu-landing .statement { padding: 48px 120px; gap: 0; }
+.jaadu-landing .statement-text {
+  max-width: 1004px;
+  text-align: center;
+  font: 600 28px/40px var(--font-sans);
+}
+.jaadu-landing .statement-line1 { color: #f3f4ff; }
+.jaadu-landing .statement-line2 { color: var(--color-statement-secondary); display: block; }
+
+/* =========================================================
+   Quant Lab
+   ========================================================= */
+.jaadu-landing .feature-panel {
+  width: 100%;
+  max-width: 1112px;
+  border-radius: var(--radius-24);
+  background: rgba(20, 17, 63, 0.35);
+  backdrop-filter: blur(var(--blur-panel));
+  -webkit-backdrop-filter: blur(var(--blur-panel));
+  border: 1px solid rgba(167, 191, 255, 0.4);
+  overflow: hidden;
+}
+.jaadu-landing .feature-tabs { display: flex; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+.jaadu-landing .feature-tab {
+  flex: 1;
+  position: relative;
+  padding: 18px 16px;
+  font: 500 14px/20px var(--font-sans);
+  color: var(--color-text-secondary);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  transition: color 0.2s;
+  text-align: center;
+}
+.jaadu-landing .feature-tab:last-child { border-right: none; }
+.jaadu-landing .feature-tab.active, .jaadu-landing .feature-tab:hover { color: #fff; }
+.jaadu-landing .tab-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 1px;
+  background: #fff;
+  display: none;
+}
+.jaadu-landing .feature-tab.active .tab-underline { display: block; }
+
+@keyframes jaaduQuantTabUnderline {
+  from { width: 1px; }
+  to { width: 100%; }
+}
+
+.jaadu-landing .feature-panel-content {
+  display: none;
+  padding: 40px;
+  gap: 20px;
+  grid-template-columns: 397px 1fr;
+  align-items: center;
+}
+.jaadu-landing .feature-panel-content.active { display: grid; }
+.jaadu-landing .feature-copy { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.jaadu-landing .feature-eyebrow { font: 400 14px/20px var(--font-sans); color: var(--color-primary-900); text-transform: uppercase; letter-spacing: 1px; }
+.jaadu-landing .feature-copy h3 { font: 600 28px/36px var(--font-sans); color: #f3f4ff; }
+.jaadu-landing .feature-copy > p { font: 400 14px/20px var(--font-sans); color: var(--color-text-secondary); }
+.jaadu-landing .feature-bullets { display: flex; flex-direction: column; gap: 8px; }
+.jaadu-landing .feature-bullets li { font: 400 14px/20px var(--font-sans); color: var(--color-text-secondary); padding-left: 18px; position: relative; }
+.jaadu-landing .feature-bullets li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary-500); }
+.jaadu-landing .feature-bullets b { color: #f3f4ff; font-weight: 600; }
+.jaadu-landing .quant-card-slot { display: flex; align-items: center; justify-content: center; overflow: hidden; }
+
+/* =========================================================
+   Features (bento grid)
+   ========================================================= */
+.jaadu-landing .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+.jaadu-landing .feature-card-slot {
+  position: relative;
+  border-radius: var(--radius-16);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+}
+
+/* =========================================================
+   Final CTA
+   ========================================================= */
+.jaadu-landing .final-cta-btn { margin-top: 14px; padding: 12px 32px; }
+
+/* =========================================================
+   Founder note
+   ========================================================= */
+.jaadu-landing .founder-note { max-width: 1200px; margin: 0 auto; }
+.jaadu-landing .founder-quote { display: flex; align-items: flex-start; gap: 16px; max-width: 900px; }
+.jaadu-landing .founder-quote blockquote { display: flex; flex-direction: column; gap: 16px; }
+.jaadu-landing .founder-quote p { font: 400 18px/28px var(--font-sans); color: var(--color-text-secondary); }
+.jaadu-landing .quote-mark { width: 32px; height: 24px; flex-shrink: 0; opacity: 0.6; }
+.jaadu-landing .quote-mark--close { transform: rotate(180deg); align-self: flex-end; }
+.jaadu-landing .founder-attribution { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.jaadu-landing .founder-name { font: 600 16px/22px var(--font-sans); color: #f3f4ff; }
+.jaadu-landing .founder-title { font: 400 13px/18px var(--font-sans); color: var(--color-text-secondary); }
+
+/* =========================================================
+   Timeline
+   ========================================================= */
+.jaadu-landing .timeline-rail {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+.jaadu-landing .timeline-line {
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  height: 0;
+  border-top: 2px dashed rgba(166, 191, 255, 0.3);
+  transform: translateY(-0.5px);
+}
+.jaadu-landing .timeline-item { position: relative; display: flex; flex-direction: column; align-items: center; gap: 10px; z-index: 1; }
+.jaadu-landing .timeline-slot { display: flex; align-items: center; justify-content: center; min-height: 44px; }
+.jaadu-landing .timeline-marker {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgba(20, 17, 63, 0.9);
+  border: 2.5px solid rgba(120, 110, 220, 0.9);
+  box-shadow: 0 0 0 4px rgba(89, 80, 200, 0.18);
+  position: relative;
+  flex-shrink: 0;
+}
+.jaadu-landing .timeline-marker::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: #fff;
+}
+.jaadu-landing .timeline-year { font: 600 16px/22px var(--font-sans); color: var(--color-text-secondary); }
+.jaadu-landing .timeline-year--accent { color: var(--color-text-accent); }
+.jaadu-landing .timeline-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 190px;
+  padding: 11px 18px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(166, 191, 255, 0.22);
+  font: 500 13px/18px var(--font-sans);
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+.jaadu-landing .timeline-pill--accent { color: var(--color-text-accent); border-color: rgba(77, 163, 255, 0.4); }
+
+/* =========================================================
+   Team
+   ========================================================= */
+.jaadu-landing .team-grid { display: flex; gap: 24px; justify-content: center; }
+.jaadu-landing .team-card {
+  position: relative;
+  width: 246px;
+  min-height: 276px;
+  padding: 20px;
+  border-radius: var(--radius-8);
+  border: 1px solid rgba(167, 191, 255, 0.3);
+  background:
+    linear-gradient(180deg, rgba(60, 76, 249, 0.08) 0%, rgba(40, 52, 179, 0) 26.1%),
+    rgba(0, 0, 67, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.jaadu-landing .team-card-socials { display: flex; gap: 10px; position: absolute; top: 20px; right: 20px; }
+.jaadu-landing .team-card-socials img { width: 16px; height: 16px; opacity: 0.7; }
+.jaadu-landing .team-name { font: 500 var(--fs-name)/26px var(--font-sans); color: #fff; margin-top: 40px; }
+.jaadu-landing .team-title { font: 400 12px/16px var(--font-sans); color: var(--color-text-secondary); }
+.jaadu-landing .team-bio { font: 400 12px/18px var(--font-sans); color: #f3f4ff; margin-top: 8px; }
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.jaadu-landing .footer {
+  display: flex;
+  justify-content: center;
+  padding: 72px 120px 48px;
+  border-top: 1px solid rgba(128, 197, 255, 0.05);
+}
+.jaadu-landing .footer-inner {
+  width: 100%;
+  max-width: 1123px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.jaadu-landing .footer-top { width: 100%; display: flex; align-items: center; justify-content: space-between; }
+.jaadu-landing .footer-top img { height: 28px; width: auto; }
+.jaadu-landing .footer-legal { display: flex; gap: 20px; }
+.jaadu-landing .footer-legal a { font: 400 14px/20px var(--font-sans); color: var(--color-text-secondary); }
+.jaadu-landing .footer-legal a:hover { color: #fff; }
+.jaadu-landing .footer-socials { display: flex; gap: 30px; align-items: center; }
+.jaadu-landing .footer-socials img, .jaadu-landing .footer-socials svg { width: 20px; height: 20px; opacity: 0.8; }
+.jaadu-landing .footer-divider { width: 100%; height: 1px; background: var(--color-footer-divider); }
+.jaadu-landing .footer-disclaimer {
+  max-width: 860px;
+  text-align: center;
+  font: 400 12px/18px var(--font-sans);
+  color: var(--color-text-muted);
+}
+.jaadu-landing .footer-copyright { font: 400 13px/18px var(--font-sans); color: var(--color-text-muted); }
+
+/* =========================================================
+   Hero dashboard mockup
+   ========================================================= */
+.jaadu-landing .hero-dash {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 1121.585px;
+  height: 673.245px;
+  border-radius: var(--radius-25);
+  border: 1.076px solid #a2b0ff;
+  overflow: hidden;
+  box-shadow: 0 40px 120px rgba(0, 8, 40, 0.55);
+}
+.jaadu-landing .hero-dash-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.jaadu-landing .dash-topbar { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; border-bottom: 1px solid var(--color-border-chart-grid); }
+.jaadu-landing .dash-logo { height: 18px; width: auto; opacity: 0.9; }
+.jaadu-landing .dash-topbar-right { display: flex; align-items: center; gap: 10px; }
+.jaadu-landing .dash-icon { width: 16px; height: 16px; opacity: 0.7; }
+.jaadu-landing .dash-btn {
+  font: 500 10px/14px var(--font-mono);
+  color: #cfd6f7;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(167, 191, 255, 0.2);
+}
+.jaadu-landing .dash-btn--accent { background: var(--color-primary-500); color: #fff; border-color: transparent; }
+.jaadu-landing .dash-coinrow { display: flex; align-items: center; gap: 18px; padding: 10px 20px; border-bottom: 1px solid var(--color-border-chart-grid); font-size: 10px; }
+.jaadu-landing .dash-coin { display: flex; align-items: center; gap: 6px; font-weight: 600; color: #fff; }
+.jaadu-landing .dash-coin-dot { width: 8px; height: 8px; border-radius: 50%; background: linear-gradient(135deg, #67d1ff, #4198ff); }
+.jaadu-landing .dash-price { color: #fff; font-weight: 600; }
+.jaadu-landing .dash-change--down { color: var(--color-red-500); }
+.jaadu-landing .dash-stat { color: #6b7398; }
+.jaadu-landing .dash-stat b { color: #cfd6f7; font-weight: 500; }
+.jaadu-landing .dash-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 8px 20px; border-bottom: 1px solid var(--color-border-chart-grid); font-size: 9px; }
+.jaadu-landing .dash-timeframes, .jaadu-landing .dash-chart-tabs { display: flex; gap: 12px; }
+.jaadu-landing .dash-timeframes span, .jaadu-landing .dash-chart-tabs span { color: #6b7398; cursor: default; }
+.jaadu-landing .dash-timeframes span.active, .jaadu-landing .dash-chart-tabs span.active { color: var(--color-primary-700); font-weight: 600; }
+.jaadu-landing .dash-body { flex: 1; display: flex; min-height: 0; }
+.jaadu-landing .dash-tools-rail { width: 28px; border-right: 1px solid var(--color-border-chart-grid); display: flex; flex-direction: column; align-items: center; gap: 14px; padding-top: 14px; }
+.jaadu-landing .dash-tools-rail span { width: 12px; height: 12px; border-radius: 3px; background: rgba(167, 191, 255, 0.12); }
+.jaadu-landing .dash-tools-rail span:first-child { background: var(--color-primary-500); }
+.jaadu-landing .dash-chart-area {
+  flex: 1;
+  position: relative;
+  border-right: 1px solid var(--color-border-chart-grid);
+  overflow: hidden;
+  background-image: linear-gradient(var(--color-border-chart-grid) 1px, transparent 1px);
+  background-size: 100% 10.2%;
+}
+.jaadu-landing .dash-badges { position: absolute; top: 10px; left: 12px; display: flex; gap: 6px; z-index: 2; }
+.jaadu-landing .dash-badge { font-size: 8px; padding: 3px 7px; border-radius: 4px; white-space: nowrap; }
+.jaadu-landing .dash-badge--pattern { background: rgba(167, 191, 255, 0.12); color: #cfd6f7; }
+.jaadu-landing .dash-badge--regime { background: var(--color-red-50); color: var(--color-red-500); }
+.jaadu-landing .dash-yaxis {
+  position: absolute;
+  right: 4px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 0 20px;
+  font-size: 7px;
+  color: #545c85;
+  text-align: right;
+  z-index: 1;
+}
+.jaadu-landing .dash-candles { position: absolute; inset: 30px 60px 20px 4px; }
+.jaadu-landing .hero-candle-body, .jaadu-landing .hero-candle-wick { position: absolute; }
+.jaadu-landing .dash-price-line {
+  position: absolute;
+  right: 4px;
+  top: 45%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  color: #fff;
+  background: var(--color-primary-500);
+  padding: 2px 8px;
+  border-radius: 3px;
+  transform: translateY(-50%);
+}
+.jaadu-landing .dash-price-line-time { opacity: 0.75; font-weight: 400; }
+.jaadu-landing .dash-right-panel { width: 260px; flex-shrink: 0; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 10px; }
+.jaadu-landing .dash-right-panel::-webkit-scrollbar { width: 4px; }
+.jaadu-landing .dash-right-panel::-webkit-scrollbar-thumb { background: rgba(167,191,255,0.2); border-radius: 2px; }
+.jaadu-landing .dash-card { border: 1px solid rgba(167, 191, 255, 0.12); border-radius: 10px; background: rgba(255, 255, 255, 0.02); padding: 10px; font-size: 9px; }
+.jaadu-landing .dash-card-title { color: #cfd6f7; font-weight: 600; margin-bottom: 8px; display: flex; justify-content: space-between; }
+.jaadu-landing .dash-card-row { display: flex; justify-content: space-between; padding: 3px 0; color: #6b7398; }
+.jaadu-landing .dash-card-row b { color: #cfd6f7; font-weight: 500; }
+.jaadu-landing .dash-card-countdown { margin-top: 6px; color: var(--color-primary-700); font-size: 8px; }
+.jaadu-landing .dash-gauge { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.jaadu-landing .dash-gauge-ring {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: conic-gradient(var(--color-primary-500) 0% 55%, rgba(167,191,255,0.12) 55% 100%);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+.jaadu-landing .dash-gauge-ring::before { content: ""; position: absolute; inset: 8px; border-radius: 50%; background: #0a0c22; }
+.jaadu-landing .dash-gauge-ring span { position: relative; font-size: 12px; font-weight: 700; color: #fff; }
+.jaadu-landing .dash-gauge-label { color: #cfd6f7; font-weight: 600; }
+.jaadu-landing .dash-gauge-legend { display: flex; flex-direction: column; gap: 3px; width: 100%; font-size: 8px; color: #6b7398; }
+.jaadu-landing .dash-trades-head, .jaadu-landing .dash-trades-body > div { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; font-size: 8px; }
+.jaadu-landing .dash-trades-head { color: #545c85; padding-bottom: 4px; border-bottom: 1px solid rgba(167,191,255,0.1); margin-bottom: 4px; }
+.jaadu-landing .dash-trades-body { display: flex; flex-direction: column; gap: 3px; max-height: 110px; overflow: hidden; }
+.jaadu-landing .dash-trades-body > div { color: #8890b8; }
+.jaadu-landing .dash-poc { border-top: 1px solid var(--color-border-chart-grid); padding: 8px 20px; font-size: 9px; }
+.jaadu-landing .dash-poc-title { color: #cfd6f7; font-weight: 600; }
+.jaadu-landing .dash-poc-sub { color: #545c85; font-weight: 400; margin-left: 8px; }
+.jaadu-landing .dash-footer { display: flex; align-items: center; justify-content: space-between; padding: 8px 20px; font-size: 8px; color: #545c85; border-top: 1px solid var(--color-border-chart-grid); }
+.jaadu-landing .dash-footer-socials { display: flex; gap: 8px; }
+.jaadu-landing .dash-footer-socials img { width: 12px; height: 12px; opacity: 0.6; }
+
+.jaadu-landing .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 4px; }
+.jaadu-landing .dot--red { background: var(--color-red-500); }
+.jaadu-landing .dot--cyan { background: var(--color-cyan-500); }
+.jaadu-landing .dot--green { background: var(--color-green-500); }
+.jaadu-landing .up { color: var(--color-green-500); }
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 1280px) {
+  .jaadu-landing .container, .jaadu-landing .section { padding-left: 56px; padding-right: 56px; }
+  .jaadu-landing .recognition, .jaadu-landing .statement, .jaadu-landing .footer { padding-left: 56px; padding-right: 56px; }
+}
+@media (max-width: 1180px) {
+  .jaadu-landing .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .jaadu-landing .feature-panel-content { grid-template-columns: 1fr; }
+  .jaadu-landing .quant-card-slot { transform: scale(0.92); transform-origin: top left; }
+  .jaadu-landing .hero-dash { transform: scale(0.85); transform-origin: top center; margin-bottom: -100px; }
+}
+@media (max-width: 900px) {
+  .jaadu-landing .nav-links { display: none; }
+  .jaadu-landing .recognition-logos { flex-wrap: wrap; height: auto; }
+  .jaadu-landing .recognition-logos img { flex: 0 1 30%; }
+  .jaadu-landing .team-grid { flex-wrap: wrap; }
+  .jaadu-landing .team-card { width: 100%; max-width: 320px; }
+  .jaadu-landing .timeline-rail { flex-direction: column; height: auto; gap: 32px; padding: 24px 0; }
+  .jaadu-landing .timeline-line { display: none; }
+  .jaadu-landing .timeline-item, .jaadu-landing .timeline-item--above { flex-direction: column; }
+  .jaadu-landing .founder-quote { flex-direction: column; }
+}
+@media (max-width: 768px) {
+  .jaadu-landing .section, .jaadu-landing .recognition, .jaadu-landing .statement, .jaadu-landing .footer { padding-left: 24px; padding-right: 24px; }
+  .jaadu-landing .feature-grid { grid-template-columns: 1fr; }
+  .jaadu-landing .hero-title h1 { font-size: 32px; line-height: 38px; }
+  .jaadu-landing .hero-dash { transform: scale(0.6); transform-origin: top center; margin-bottom: -280px; }
+  .jaadu-landing .dash-body { flex-direction: column; }
+  .jaadu-landing .footer-top { flex-direction: column; gap: 16px; }
+}
+@media (max-width: 480px) {
+  .jaadu-landing .hero-dash { transform: scale(0.42); margin-bottom: -400px; }
+  .jaadu-landing .nav-inner { margin: 0 12px; padding: 10px 16px; }
+}
