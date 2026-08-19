@@ -120,10 +120,10 @@ export function CircuitBackground() {
       hubOpacity += (hubTarget - hubOpacity) * (hubTarget > hubOpacity ? LERP_IN : LERP_OUT);
       if (hubOpacity < 0.004) hubOpacity = 0;
       if (hubOpacity > 0) {
-        hubDot.setAttribute("cx", localX.toFixed(1));
-        hubDot.setAttribute("cy", localY.toFixed(1));
+        hubDot!.setAttribute("cx", localX.toFixed(1));
+        hubDot!.setAttribute("cy", localY.toFixed(1));
       }
-      group.style.opacity = hubOpacity.toFixed(3);
+      group!.style.opacity = hubOpacity.toFixed(3);
 
       if (anyActive || hubOpacity > 0 || mouseActive) {
         rafId = requestAnimationFrame(tick);
