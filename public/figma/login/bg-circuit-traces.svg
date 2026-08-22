@@ -1,0 +1,161 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="05 &#194;&#183; circuit traces" clip-path="url(#clip0_0_4)">
+<rect id="pad" x="178" y="478" width="4" height="4" stroke="white" stroke-opacity="0.121135"/>
+<rect id="trace" x="180" y="480" width="1" height="220" fill="white" fill-opacity="0.0711352"/>
+<circle id="via" cx="180" cy="700" r="2" fill="white" fill-opacity="0.131135"/>
+<rect id="trace_2" x="180" y="700" width="100" height="1" fill="white" fill-opacity="0.0711352"/>
+<circle id="via_2" cx="280" cy="700" r="2" fill="white" fill-opacity="0.131135"/>
+<rect id="trace_3" x="280" y="700" width="1" height="140" fill="white" fill-opacity="0.0711352"/>
+<circle id="via_3" cx="280" cy="840" r="2" fill="white" fill-opacity="0.131135"/>
+<rect id="trace_4" x="280" y="840" width="160" height="1" fill="white" fill-opacity="0.0711352"/>
+<rect id="pad_2" x="438" y="838" width="4" height="4" stroke="white" stroke-opacity="0.121135"/>
+<rect id="pad_3" x="1378" y="678" width="4" height="4" stroke="white" stroke-opacity="0.104005"/>
+<rect id="trace_5" x="1380" y="580" width="1" height="100" fill="white" fill-opacity="0.0540051"/>
+<circle id="via_4" cx="1380" cy="580" r="2" fill="white" fill-opacity="0.114005"/>
+<rect id="trace_6" x="1260" y="580" width="120" height="1" fill="white" fill-opacity="0.0540051"/>
+<rect id="pad_4" x="1258" y="578" width="4" height="4" stroke="white" stroke-opacity="0.104005"/>
+<rect id="pad_5" x="1258" y="378" width="4" height="4" stroke="white" stroke-opacity="0.142349"/>
+<rect id="trace_7" x="1260" y="380" width="80" height="1" fill="white" fill-opacity="0.0923488"/>
+<circle id="via_5" cx="1340" cy="380" r="2" fill="white" fill-opacity="0.152349"/>
+<rect id="trace_8" x="1340" y="200" width="1" height="180" fill="white" fill-opacity="0.0923488"/>
+<rect id="trace_9" x="1340" y="200" width="100" height="1" fill="white" fill-opacity="0.0923488"/>
+<rect id="trace_10" x="1440" y="200" width="1" height="120" fill="white" fill-opacity="0.0923488"/>
+<rect id="pad_6" x="1438" y="318" width="4" height="4" stroke="white" stroke-opacity="0.142349"/>
+<rect id="pad_7" x="38" y="578" width="4" height="4" stroke="white" stroke-opacity="0.108661"/>
+<rect id="trace_11" x="40" y="580" width="60" height="1" fill="white" fill-opacity="0.0586606"/>
+<circle id="via_6" cx="100" cy="580" r="2" fill="white" fill-opacity="0.118661"/>
+<rect id="trace_12" x="100" y="440" width="1" height="140" fill="white" fill-opacity="0.0586606"/>
+<rect id="pad_8" x="98" y="438" width="4" height="4" stroke="white" stroke-opacity="0.108661"/>
+<rect id="pad_9" x="638" y="418" width="4" height="4" stroke="white" stroke-opacity="0.13161"/>
+<rect id="trace_13" x="640" y="420" width="1" height="220" fill="white" fill-opacity="0.0816102"/>
+<rect id="trace_14" x="640" y="640" width="120" height="1" fill="white" fill-opacity="0.0816102"/>
+<circle id="via_7" cx="760" cy="640" r="2" fill="white" fill-opacity="0.14161"/>
+<rect id="trace_15" x="760" y="500" width="1" height="140" fill="white" fill-opacity="0.0816102"/>
+<rect id="trace_16" x="580" y="500" width="180" height="1" fill="white" fill-opacity="0.0816102"/>
+<rect id="pad_10" x="578" y="498" width="4" height="4" stroke="white" stroke-opacity="0.13161"/>
+<rect id="pad_11" x="1178" y="58" width="4" height="4" stroke="white" stroke-opacity="0.122912"/>
+<rect id="trace_17" x="1180" y="60" width="1" height="200" fill="white" fill-opacity="0.0729124"/>
+<rect id="trace_18" x="1000" y="260" width="180" height="1" fill="white" fill-opacity="0.0729124"/>
+<rect id="trace_19" x="1000" y="260" width="1" height="200" fill="white" fill-opacity="0.0729124"/>
+<rect id="trace_20" x="1000" y="460" width="160" height="1" fill="white" fill-opacity="0.0729124"/>
+<rect id="pad_12" x="1158" y="458" width="4" height="4" stroke="white" stroke-opacity="0.122912"/>
+<rect id="pad_13" x="678" y="318" width="4" height="4" stroke="white" stroke-opacity="0.137111"/>
+<rect id="trace_21" x="680" y="320" width="260" height="1" fill="white" fill-opacity="0.0871106"/>
+<circle id="via_8" cx="940" cy="320" r="2" fill="white" fill-opacity="0.147111"/>
+<rect id="trace_22" x="940" y="320" width="1" height="240" fill="white" fill-opacity="0.0871106"/>
+<rect id="trace_23" x="840" y="560" width="100" height="1" fill="white" fill-opacity="0.0871106"/>
+<rect id="pad_14" x="838" y="558" width="4" height="4" stroke="white" stroke-opacity="0.137111"/>
+<rect id="pad_15" x="918" y="678" width="4" height="4" stroke="white" stroke-opacity="0.123462"/>
+<rect id="trace_24" x="780" y="680" width="140" height="1" fill="white" fill-opacity="0.0734622"/>
+<rect id="trace_25" x="780" y="580" width="1" height="100" fill="white" fill-opacity="0.0734622"/>
+<rect id="pad_16" x="778" y="578" width="4" height="4" stroke="white" stroke-opacity="0.123462"/>
+<rect id="pad_17" x="458" y="178" width="4" height="4" stroke="white" stroke-opacity="0.113961"/>
+<rect id="trace_26" x="460" width="1" height="180" fill="white" fill-opacity="0.0639609"/>
+<rect id="trace_27" x="300" width="160" height="1" fill="white" fill-opacity="0.0639609"/>
+<circle id="via_9" cx="300" r="2" fill="white" fill-opacity="0.123961"/>
+<rect id="trace_28" x="300" width="1" height="160" fill="white" fill-opacity="0.0639609"/>
+<rect id="trace_29" x="300" y="160" width="140" height="1" fill="white" fill-opacity="0.0639609"/>
+<rect id="pad_18" x="438" y="158" width="4" height="4" stroke="white" stroke-opacity="0.113961"/>
+<rect id="pad_19" x="558" y="698" width="4" height="4" stroke="white" stroke-opacity="0.143966"/>
+<rect id="trace_30" x="560" y="700" width="240" height="1" fill="white" fill-opacity="0.0939658"/>
+<rect id="trace_31" x="800" y="640" width="1" height="60" fill="white" fill-opacity="0.0939658"/>
+<rect id="pad_20" x="798" y="638" width="4" height="4" stroke="white" stroke-opacity="0.143966"/>
+<rect id="pad_21" x="978" y="318" width="4" height="4" stroke="white" stroke-opacity="0.142505"/>
+<rect id="trace_32" x="980" y="240" width="1" height="80" fill="white" fill-opacity="0.0925053"/>
+<rect id="trace_33" x="980" y="240" width="200" height="1" fill="white" fill-opacity="0.0925053"/>
+<rect id="trace_34" x="1180" y="60" width="1" height="180" fill="white" fill-opacity="0.0925053"/>
+<circle id="via_10" cx="1180" cy="60" r="2" fill="white" fill-opacity="0.152505"/>
+<rect id="trace_35" x="1100" y="60" width="80" height="1" fill="white" fill-opacity="0.0925053"/>
+<rect id="pad_22" x="1098" y="58" width="4" height="4" stroke="white" stroke-opacity="0.142505"/>
+<rect id="pad_23" x="1098" y="178" width="4" height="4" stroke="white" stroke-opacity="0.107729"/>
+<rect id="trace_36" x="1100" y="180" width="240" height="1" fill="white" fill-opacity="0.0577289"/>
+<circle id="via_11" cx="1340" cy="180" r="2" fill="white" fill-opacity="0.117729"/>
+<rect id="trace_37" x="1340" y="180" width="1" height="240" fill="white" fill-opacity="0.0577289"/>
+<circle id="via_12" cx="1340" cy="420" r="2" fill="white" fill-opacity="0.117729"/>
+<rect id="trace_38" x="1160" y="420" width="180" height="1" fill="white" fill-opacity="0.0577289"/>
+<rect id="trace_39" x="1160" y="200" width="1" height="220" fill="white" fill-opacity="0.0577289"/>
+<rect id="pad_24" x="1158" y="198" width="4" height="4" stroke="white" stroke-opacity="0.107729"/>
+<rect id="pad_25" x="778" y="818" width="4" height="4" stroke="white" stroke-opacity="0.125255"/>
+<rect id="trace_40" x="660" y="820" width="120" height="1" fill="white" fill-opacity="0.0752547"/>
+<rect id="trace_41" x="660" y="820" width="1" height="80" fill="white" fill-opacity="0.0752547"/>
+<circle id="via_13" cx="660" cy="900" r="2" fill="white" fill-opacity="0.135255"/>
+<rect id="trace_42" x="580" y="900" width="80" height="1" fill="white" fill-opacity="0.0752547"/>
+<rect id="pad_26" x="578" y="898" width="4" height="4" stroke="white" stroke-opacity="0.125255"/>
+<rect id="pad_27" x="1258" y="178" width="4" height="4" stroke="white" stroke-opacity="0.1224"/>
+<rect id="trace_43" x="1100" y="180" width="160" height="1" fill="white" fill-opacity="0.0724"/>
+<rect id="trace_44" x="1100" width="1" height="180" fill="white" fill-opacity="0.0724"/>
+<circle id="via_14" cx="1100" r="2" fill="white" fill-opacity="0.1324"/>
+<rect id="trace_45" x="860" width="240" height="1" fill="white" fill-opacity="0.0724"/>
+<circle id="via_15" cx="860" r="2" fill="white" fill-opacity="0.1324"/>
+<rect id="trace_46" x="860" width="1" height="220" fill="white" fill-opacity="0.0724"/>
+<rect id="pad_28" x="858" y="218" width="4" height="4" stroke="white" stroke-opacity="0.1224"/>
+<rect id="pad_29" x="798" y="598" width="4" height="4" stroke="white" stroke-opacity="0.124485"/>
+<rect id="trace_47" x="800" y="600" width="260" height="1" fill="white" fill-opacity="0.0744851"/>
+<circle id="via_16" cx="1060" cy="600" r="2" fill="white" fill-opacity="0.134485"/>
+<rect id="trace_48" x="1060" y="600" width="1" height="180" fill="white" fill-opacity="0.0744851"/>
+<rect id="pad_30" x="1058" y="778" width="4" height="4" stroke="white" stroke-opacity="0.124485"/>
+<rect id="pad_31" x="198" y="858" width="4" height="4" stroke="white" stroke-opacity="0.118925"/>
+<rect id="trace_49" x="200" y="860" width="240" height="1" fill="white" fill-opacity="0.0689252"/>
+<rect id="trace_50" x="440" y="620" width="1" height="240" fill="white" fill-opacity="0.0689252"/>
+<rect id="pad_32" x="438" y="618" width="4" height="4" stroke="white" stroke-opacity="0.118925"/>
+<rect id="pad_33" x="978" y="318" width="4" height="4" stroke="white" stroke-opacity="0.121288"/>
+<rect id="trace_51" x="980" y="220" width="1" height="100" fill="white" fill-opacity="0.0712884"/>
+<rect id="trace_52" x="980" y="220" width="240" height="1" fill="white" fill-opacity="0.0712884"/>
+<circle id="via_17" cx="1220" cy="220" r="2" fill="white" fill-opacity="0.131288"/>
+<rect id="trace_53" x="1220" y="220" width="1" height="80" fill="white" fill-opacity="0.0712884"/>
+<rect id="pad_34" x="1218" y="298" width="4" height="4" stroke="white" stroke-opacity="0.121288"/>
+<rect id="pad_35" x="538" y="158" width="4" height="4" stroke="white" stroke-opacity="0.121755"/>
+<rect id="trace_54" x="540" y="160" width="140" height="1" fill="white" fill-opacity="0.0717548"/>
+<rect id="trace_55" x="680" y="20" width="1" height="140" fill="white" fill-opacity="0.0717548"/>
+<rect id="pad_36" x="678" y="18" width="4" height="4" stroke="white" stroke-opacity="0.121755"/>
+<rect id="pad_37" x="618" y="858" width="4" height="4" stroke="white" stroke-opacity="0.128472"/>
+<rect id="trace_56" x="620" y="760" width="1" height="100" fill="white" fill-opacity="0.0784717"/>
+<circle id="via_18" cx="620" cy="760" r="2" fill="white" fill-opacity="0.138472"/>
+<rect id="trace_57" x="620" y="760" width="100" height="1" fill="white" fill-opacity="0.0784717"/>
+<rect id="pad_38" x="718" y="758" width="4" height="4" stroke="white" stroke-opacity="0.128472"/>
+<rect id="pad_39" x="658" y="678" width="4" height="4" stroke="white" stroke-opacity="0.102125"/>
+<rect id="trace_58" x="660" y="540" width="1" height="140" fill="white" fill-opacity="0.0521252"/>
+<rect id="trace_59" x="660" y="540" width="260" height="1" fill="white" fill-opacity="0.0521252"/>
+<rect id="pad_40" x="918" y="538" width="4" height="4" stroke="white" stroke-opacity="0.102125"/>
+<rect id="pad_41" x="558" y="498" width="4" height="4" stroke="white" stroke-opacity="0.130172"/>
+<rect id="trace_60" x="560" y="500" width="160" height="1" fill="white" fill-opacity="0.0801721"/>
+<circle id="via_19" cx="720" cy="500" r="2" fill="white" fill-opacity="0.140172"/>
+<rect id="trace_61" x="720" y="340" width="1" height="160" fill="white" fill-opacity="0.0801721"/>
+<rect id="pad_42" x="718" y="338" width="4" height="4" stroke="white" stroke-opacity="0.130172"/>
+<rect id="pad_43" x="898" y="118" width="4" height="4" stroke="white" stroke-opacity="0.129203"/>
+<rect id="trace_62" x="760" y="120" width="140" height="1" fill="white" fill-opacity="0.0792026"/>
+<rect id="trace_63" x="760" y="120" width="1" height="60" fill="white" fill-opacity="0.0792026"/>
+<rect id="trace_64" x="760" y="180" width="120" height="1" fill="white" fill-opacity="0.0792026"/>
+<rect id="pad_44" x="878" y="178" width="4" height="4" stroke="white" stroke-opacity="0.129203"/>
+<rect id="pad_45" x="418" y="278" width="4" height="4" stroke="white" stroke-opacity="0.108857"/>
+<rect id="trace_65" x="420" y="280" width="180" height="1" fill="white" fill-opacity="0.0588571"/>
+<circle id="via_20" cx="600" cy="280" r="2" fill="white" fill-opacity="0.118857"/>
+<rect id="trace_66" x="600" y="140" width="1" height="140" fill="white" fill-opacity="0.0588571"/>
+<rect id="trace_67" x="360" y="140" width="240" height="1" fill="white" fill-opacity="0.0588571"/>
+<rect id="pad_46" x="358" y="138" width="4" height="4" stroke="white" stroke-opacity="0.108857"/>
+<rect id="pad_47" x="18" y="238" width="4" height="4" stroke="white" stroke-opacity="0.113425"/>
+<rect id="trace_68" x="20" y="80" width="1" height="160" fill="white" fill-opacity="0.063425"/>
+<rect id="trace_69" y="80" width="20" height="1" fill="white" fill-opacity="0.063425"/>
+<circle id="via_21" cy="80" r="2" fill="white" fill-opacity="0.123425"/>
+<rect id="trace_70" y="80" width="1" height="80" fill="white" fill-opacity="0.063425"/>
+<circle id="via_22" cy="160" r="2" fill="white" fill-opacity="0.123425"/>
+<rect id="trace_71" y="160" width="240" height="1" fill="white" fill-opacity="0.063425"/>
+<rect id="pad_48" x="238" y="158" width="4" height="4" stroke="white" stroke-opacity="0.113425"/>
+<rect id="pad_49" x="138" y="338" width="4" height="4" stroke="white" stroke-opacity="0.125454"/>
+<rect id="trace_72" y="340" width="140" height="1" fill="white" fill-opacity="0.0754544"/>
+<rect id="trace_73" y="340" width="1" height="120" fill="white" fill-opacity="0.0754544"/>
+<circle id="via_23" cy="460" r="2" fill="white" fill-opacity="0.135454"/>
+<rect id="trace_74" y="460" width="100" height="1" fill="white" fill-opacity="0.0754544"/>
+<rect id="pad_50" x="98" y="458" width="4" height="4" stroke="white" stroke-opacity="0.125454"/>
+<rect id="pad_51" x="658" y="538" width="4" height="4" stroke="white" stroke-opacity="0.10083"/>
+<rect id="trace_75" x="660" y="540" width="180" height="1" fill="white" fill-opacity="0.05083"/>
+<rect id="trace_76" x="840" y="540" width="1" height="100" fill="white" fill-opacity="0.05083"/>
+<rect id="trace_77" x="720" y="640" width="120" height="1" fill="white" fill-opacity="0.05083"/>
+<rect id="pad_52" x="718" y="638" width="4" height="4" stroke="white" stroke-opacity="0.10083"/>
+</g>
+<defs>
+<clipPath id="clip0_0_4">
+<rect width="1440" height="900" fill="white"/>
+</clipPath>
+</defs>
+</svg>

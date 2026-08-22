@@ -1,10 +1,5 @@
-import { AuthScreen } from "@/components/auth/AuthScreen";
-import { LoginForm } from "@/components/auth/LoginForm";
+import { LoginScreen } from "@/components/login/LoginScreen";
 
 export default function LoginPage() {
-  return (
-    <AuthScreen formTop={150}>
-      <LoginForm />
-    </AuthScreen>
-  );
+  return <LoginScreen />;
 }
