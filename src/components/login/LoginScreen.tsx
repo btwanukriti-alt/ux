@@ -8,16 +8,10 @@ import { SpotlightPanel } from "./SpotlightPanel";
 
 // Figma "Landing Page — Desktop" node 3046:234479 (the frame is misnamed
 // from being duplicated — it's actually the login screen). The right-hand
-// panel's native size is the "Form Hover Effect" frame's own box (682x826,
-// node 3316:307889) so the mosaic tiles' Figma-exact coordinates and the
-// Login Form's exact offset within it (Figma-absolute x=832,y=174.88 minus
-// the panel's own x=741,y=33) stay correct — it's then scaled down via CSS
-// transform (rather than reflowed) to fit the login screen's target panel
-// height, same technique as IllustrationPanel.
-const NATIVE_WIDTH = 682;
-const NATIVE_HEIGHT = 826;
+// panel keeps the mosaic's native 682px width fixed (SpotlightPanel only
+// compresses its height to PANEL_HEIGHT) and centers the login form on
+// top of it at natural size, per the user's explicit request.
 const PANEL_HEIGHT = 750;
-const SCALE = PANEL_HEIGHT / NATIVE_HEIGHT;
 
 // The (illustration + gap + form) group has a fixed natural width. On a
 // viewport narrower than that, it used to just overflow the centered
@@ -59,15 +53,9 @@ export function LoginScreen() {
         >
           <IllustrationPanel />
 
-          <div className="relative flex items-center justify-center" style={{ width: NATIVE_WIDTH * SCALE, height: PANEL_HEIGHT }}>
-            <div style={{ width: NATIVE_WIDTH, height: NATIVE_HEIGHT, transform: `scale(${SCALE})`, transformOrigin: "top left" }}>
-              <SpotlightPanel>
-                <div className="absolute" style={{ left: 91, top: 141.88 }}>
-                  <LoginForm />
-                </div>
-              </SpotlightPanel>
-            </div>
-          </div>
+          <SpotlightPanel height={PANEL_HEIGHT}>
+            <LoginForm />
+          </SpotlightPanel>
         </div>
       </div>
     </div>
