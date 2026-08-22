@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Nav() {
   return (
     <header className="nav" id="top">
@@ -13,8 +15,12 @@ export function Nav() {
           <a href="#team">Team</a>
         </nav>
         <div className="nav-actions">
-          <button className="btn btn-ghost">Login</button>
-          <button className="btn btn-primary">Sign up</button>
+          <Link href="/login" className="btn btn-ghost">
+            Login
+          </Link>
+          <Link href="/signup" className="btn btn-primary">
+            Sign up
+          </Link>
         </div>
       </div>
     </header>
